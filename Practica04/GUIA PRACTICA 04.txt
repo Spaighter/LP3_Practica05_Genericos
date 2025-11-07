@@ -1,0 +1,88 @@
+ACTIVIDAD 01
+Archivo: CuentaBancaria.java
+Descripción: Clase base con atributos (numeroCuenta, titular, saldo).
+Incluye validaciones con IllegalArgumentException y uso de SaldoInsuficienteException.
+
+ACTIVIDAD 02
+Archivos:
+
+SaldoInsuficienteException.java
+
+CuentaNoEncontradaException.java
+
+SaldoNoCeroException.java
+Descripción: Definición de excepciones personalizadas que extienden de Exception.
+Controlan errores de saldo, inexistencia de cuenta y cierre incorrecto.
+
+ACTIVIDAD 03
+Archivos:
+
+CuentaCredito.java
+
+LimiteCreditoExcedidoException.java
+Descripción: Clase hija de CuentaBancaria con atributo limiteCredito.
+Permite retiros usando crédito y lanza LimiteCreditoExcedidoException si se supera el límite.
+
+ACTIVIDAD 04
+Archivo: ReporteTransacciones.java
+Descripción: Genera reportes de cuentas bancarias en archivo de texto (.txt)
+Usa try-with-resources y maneja IOException para garantizar el cierre correcto del archivo.
+
+ACTIVIDAD 05
+Archivo: Main.java
+Descripción: Clase principal que prueba todas las actividades anteriores.
+Ejecuta depósitos, retiros, manejo de excepciones y generación de reportes.
+
+EJERCICIO PROPUESTO 1
+Archivos:
+
+ProcesadorEntrada.java
+
+ExcepcionVocal.java
+
+ExcepcionNumero.java
+
+ExcepcionBlanco.java
+
+ExcepcionSalida.java
+Descripción: Programa que lee caracteres del teclado y lanza diferentes excepciones
+según el tipo de carácter (vocal, número, espacio o símbolo de salida).
+
+EJERCICIO PROPUESTO 2
+Archivos:
+
+Calculadora.java
+
+DivisionPorCeroException.java
+
+MainCalculadora.java
+Descripción: Calculadora que realiza operaciones aritméticas básicas.
+Controla división entre cero y errores de entrada con try-catch.
+
+EJERCICIO PROPUESTO 3
+Archivos:
+
+Numero.java
+
+MainNumero.java
+Descripción: Clase que valida que un número no sea negativo.
+Utiliza IllegalArgumentException para manejar valores inválidos.
+
+EJERCICIO PROPUESTO 4
+Archivos:
+
+RegistroEstudiantes.java
+
+MainRegistro.java
+Descripción: Gestiona una lista de estudiantes con ArrayList.
+Controla entradas vacías y búsquedas inválidas usando IllegalArgumentException y NoSuchElementException.
+
+EJERCICIO PROPUESTO 5
+Archivos:
+
+ControladorBanco.java
+
+MainBanco.java
+Descripción: Controlador que gestiona varias cuentas y transferencias.
+Maneja excepciones encadenadas (SaldoInsuficienteException y CuentaNoEncontradaException)
+usando propagación con throw new Exception(e).
