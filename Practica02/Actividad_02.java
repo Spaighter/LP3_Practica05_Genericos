@@ -1,38 +1,25 @@
-package plataforma;
+package Practica02;
 
-import java.util.ArrayList;
-import java.util.List;
+/*
+ * Clase Contador — demuestra uso de variables estáticas, this y constructores.
+ */
+public class Actividad_02 {
+    private int valor;
+    private static int contadorGlobal = 0;
+    public static final int VALOR_INICIAL = 0;
 
-public class Curso {
-    private String nombreCurso;
-    private Profesor profesor;  // Agregación: curso tiene profesor
-    private List<Estudiante> estudiantes; // Composición: curso contiene estudiantes
-
-    // Variable de clase (estática)
-    private static int totalCursos = 0;
-
-    public Curso(String nombreCurso, Profesor profesor) {
-        this.nombreCurso = nombreCurso;
-        this.profesor = profesor;
-        this.estudiantes = new ArrayList<>();
-        totalCursos++;
+    public Actividad_02() {
+        valor = VALOR_INICIAL;
+        contadorGlobal++;
     }
 
-    public void inscribirEstudiante(Estudiante e) {
-        estudiantes.add(e);
+    public Actividad_02(int valor) {
+        this.valor = valor;
+        contadorGlobal++;
     }
 
-    public void mostrarCurso() {
-        System.out.println("Curso: " + nombreCurso);
-        profesor.mostrarDatos();
-        System.out.println("Estudiantes matriculados: " + estudiantes.size());
-        for (Estudiante e : estudiantes) {
-            e.mostrarDatos();
-        }
-    }
-
-    public static int getTotalCursos() {
-        return totalCursos;
-    }
+    public void incrementar() { valor++; }
+    public void decrementar() { valor--; }
+    public int getValor() { return valor; }
+    public static int getContadorGlobal() { return contadorGlobal; }
 }
-
